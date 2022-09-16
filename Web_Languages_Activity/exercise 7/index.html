@@ -1,0 +1,28 @@
+<!-- Creates the input bar that takes an input type of text and reads "Enter your name"-->
+<input id="name-input" type="text" placeholder="Enter your name" />
+<!-- Creates a button object that reads "Click Me" -->
+<button id="my-button">Click Me</button>
+
+<!-- Indicates the beginning of javascript -->
+<script>
+  //Creates a button variable from the html object using the id
+  var myButton = document.querySelector('#my-button');
+  //Creates an input bar variable from the html object using the id
+  var nameInput = document.querySelector('#name-input');
+
+  /** 
+   * Creates a listener object for the button with two parameters: 
+   * The first is the event that must occur to incur parameter two 
+   * which in this case is clicking the button object
+   * 
+   * The second is a function that first checks to make sure the bar
+   * is not blank, then if it is not, prints out 'Hello' plus the 
+   * input in an alert at the top of the screen
+   */
+  myButton.addEventListener('click', function () {
+    if (nameInput.value !== '') {
+      alert('Hello ' + nameInput.value);
+    }
+  });
+// Ends js
+</script>
